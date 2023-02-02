@@ -1,0 +1,1654 @@
+{
+	"info": {
+		"_postman_id": "3d188fa4-0c04-4148-b8cd-138ac3aefece",
+		"name": "Election",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"email\":\"mubashirbabar10@gmail.com\",\n        \"password\":\"000000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCountry",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY3MDAyMDgzMywianRpIjoiMzliYmFlZDItMWY4Ni00NjZhLTgyNGMtMWI1YjFjMDcxNTE1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2NzAwMjA4MzMsImV4cCI6MTY3MjA5NDQzM30.AY9k7rtjdA3z4nw9CDp3zU1Ionjxc7rYviHGk_-m1TU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getCountry?=1234",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getCountry"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "1234"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getState",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjExOTY0NiwianRpIjoiMDA4N2ViNTMtMDQwMy00YWYyLWIwZTItY2FhNTQ1YjY1MTMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2NjYxMTk2NDYsImV4cCI6MTY2ODE5MzI0Nn0.YZo4DJb4g2NjT0-b3qoftravxp58s--zhoD_rKCqsJM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/getState",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getState"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "1234",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLGA?name=ABIA",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjExOTY0NiwianRpIjoiMDA4N2ViNTMtMDQwMy00YWYyLWIwZTItY2FhNTQ1YjY1MTMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2NjYxMTk2NDYsImV4cCI6MTY2ODE5MzI0Nn0.YZo4DJb4g2NjT0-b3qoftravxp58s--zhoD_rKCqsJM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/getLGA?name=ABIA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getLGA"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ABIA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getWard?state=ABIA&lga=ABA NORTH",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjExOTY0NiwianRpIjoiMDA4N2ViNTMtMDQwMy00YWYyLWIwZTItY2FhNTQ1YjY1MTMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2NjYxMTk2NDYsImV4cCI6MTY2ODE5MzI0Nn0.YZo4DJb4g2NjT0-b3qoftravxp58s--zhoD_rKCqsJM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/getWard?state=ABIA&lga=ABA NORTH",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getWard"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "ABIA"
+						},
+						{
+							"key": "lga",
+							"value": "ABA NORTH"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPol?state=ABIA&lga=ABA NORTH&wardID=2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2NjExOTY0NiwianRpIjoiMDA4N2ViNTMtMDQwMy00YWYyLWIwZTItY2FhNTQ1YjY1MTMwIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2NjYxMTk2NDYsImV4cCI6MTY2ODE5MzI0Nn0.YZo4DJb4g2NjT0-b3qoftravxp58s--zhoD_rKCqsJM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:5000/getPol?state=ABIA&lga=ABA NORTH&wardID=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getPol"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "ABIA"
+						},
+						{
+							"key": "lga",
+							"value": "ABA NORTH"
+						},
+						{
+							"key": "wardID",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPolbadge?state=ABIA&lga=ABA NORTH&wardID=2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getPolbadge?state=ABIA&lga=ABA NORTH&wardID=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getPolbadge"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "ABIA"
+						},
+						{
+							"key": "lga",
+							"value": "ABA NORTH"
+						},
+						{
+							"key": "wardID",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getWardbadge?state=ABIA&lga=ABA NORTH",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getWardbadge?state=ABIA&lga=ABA NORTH",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getWardbadge"
+					],
+					"query": [
+						{
+							"key": "state",
+							"value": "ABIA"
+						},
+						{
+							"key": "lga",
+							"value": "ABA NORTH"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getLGAbadge?name=ABIA",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getLGAbadge?name=ABIA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getLGAbadge"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "ABIA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStatebadge",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getStatebadge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getStatebadge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCountrybadge",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getCountrybadge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getCountrybadge"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcheck-puid",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/get-pollingid?pu_name=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get-pollingid"
+					],
+					"query": [
+						{
+							"key": "pu_name",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getget-pu-result",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/get-pu-result?country_name=NIGERIA&state_name=ABIA&lga_name=ABA NORTH&ward_name=ARIARIA MARKET&pu_name=B.T.C-SCHOOL PREMISES I",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get-pu-result"
+					],
+					"query": [
+						{
+							"key": "country_name",
+							"value": "NIGERIA"
+						},
+						{
+							"key": "state_name",
+							"value": "ABIA"
+						},
+						{
+							"key": "lga_name",
+							"value": "ABA NORTH"
+						},
+						{
+							"key": "ward_name",
+							"value": "ARIARIA MARKET"
+						},
+						{
+							"key": "pu_name",
+							"value": "B.T.C-SCHOOL PREMISES I"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postupdate-pu",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODM0MzgwMywianRpIjoiZWNjM2IyOGMtYzA3OC00YjVkLTkwMDUtZTM0NzA3NjgzZDJiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2NjgzNDM4MDMsImV4cCI6MTY3MDQxNzQwM30.X-PALTQDWqcG01mcD-UD1WAtowgHmmLtEAF2pJk8JgQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{'A': 0, 'AA': ['4'], 'AAC': 0, 'ADC': 0, 'ADP': 0, 'APC': 0, 'APGA': 0, 'APM': 0, 'APP': 0, 'BP': 0, 'LP': 0, 'NNPP': 0, 'NRM': 0, 'PDP': 0, 'PRP': 0, 'SDP': 0, 'YPP': 0, 'ZLP': 0, 'Total_Accredited_voters': 0, 'Total_Registered_voters': ['5'], 'Total_Rejected_votes': 0}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/update-pu?pu_name=B.T.C-SCHOOL PREMISES I&ward_name=ARIARIA MARKET&lga_name=ABA NORTH&state_name=ABIA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"update-pu"
+					],
+					"query": [
+						{
+							"key": "pu_name",
+							"value": "B.T.C-SCHOOL PREMISES I"
+						},
+						{
+							"key": "ward_name",
+							"value": "ARIARIA MARKET"
+						},
+						{
+							"key": "lga_name",
+							"value": "ABA NORTH"
+						},
+						{
+							"key": "state_name",
+							"value": "ABIA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postcancel-pu",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/cancel-pu?pu_id=530022",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cancel-pu"
+					],
+					"query": [
+						{
+							"key": "pu_id",
+							"value": "530022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcheck-wardid",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/check-wardid?ward_name=EZIAMA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"check-wardid"
+					],
+					"query": [
+						{
+							"key": "ward_name",
+							"value": "EZIAMA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getget-ward-result",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/get-ward-result?country_name=NIGERIA&ward_name=ARIARIA MARKET&lga_name=ABA NORTH&state_name=ABIA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get-ward-result"
+					],
+					"query": [
+						{
+							"key": "country_name",
+							"value": "NIGERIA"
+						},
+						{
+							"key": "ward_name",
+							"value": "ARIARIA MARKET"
+						},
+						{
+							"key": "lga_name",
+							"value": "ABA NORTH"
+						},
+						{
+							"key": "state_name",
+							"value": "ABIA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postupdate-ward",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/update-ward?ward_id=350031",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"update-ward"
+					],
+					"query": [
+						{
+							"key": "ward_id",
+							"value": "350031"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postcancel-ward",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/cancel-ward?ward_id=350031",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cancel-ward"
+					],
+					"query": [
+						{
+							"key": "ward_id",
+							"value": "350031"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcheck-lgaid",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/check-lgaid?lga_name=ABA NORTH",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"check-lgaid"
+					],
+					"query": [
+						{
+							"key": "lga_name",
+							"value": "ABA NORTH"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getget-lga-result",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/get-lga-result?country_name=NIGERIA&lga_name=ABA NORTH&state_name=ABIA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get-lga-result"
+					],
+					"query": [
+						{
+							"key": "country_name",
+							"value": "NIGERIA"
+						},
+						{
+							"key": "lga_name",
+							"value": "ABA NORTH"
+						},
+						{
+							"key": "state_name",
+							"value": "ABIA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postupdate-lga",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/update-lga?lga_id=330021",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"update-lga"
+					],
+					"query": [
+						{
+							"key": "lga_id",
+							"value": "330021"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "postcancel-lga",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/cancel-lga?lga_id=330021",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cancel-lga"
+					],
+					"query": [
+						{
+							"key": "lga_id",
+							"value": "330021"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcheck-stateid",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/check-stateid?state_name=ABIA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"check-stateid"
+					],
+					"query": [
+						{
+							"key": "state_name",
+							"value": "ABIA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-state-result",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/get-state-result?country_name=NIGERIA&state_name=ABIA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get-state-result"
+					],
+					"query": [
+						{
+							"key": "country_name",
+							"value": "NIGERIA"
+						},
+						{
+							"key": "state_name",
+							"value": "ABIA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getupdate-state",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:5000/update-state?country=NIGERIA&state_name=ABIA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"update-state"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "NIGERIA"
+						},
+						{
+							"key": "state_name",
+							"value": "ABIA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcancel-state",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/cancel-state?country_name=NIGERIA&state_name=ABIA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cancel-state"
+					],
+					"query": [
+						{
+							"key": "country_name",
+							"value": "NIGERIA"
+						},
+						{
+							"key": "state_name",
+							"value": "ABIA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcheck-countryid",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/check-countryid?country_name=Nigeria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"check-countryid"
+					],
+					"query": [
+						{
+							"key": "country_name",
+							"value": "Nigeria"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getget-country-result",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/get-country-result?country_name=NIGERIA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"get-country-result"
+					],
+					"query": [
+						{
+							"key": "country_name",
+							"value": "NIGERIA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getupdate-country",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/update-country?country_name=Nigeria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"update-country"
+					],
+					"query": [
+						{
+							"key": "country_name",
+							"value": "Nigeria"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcancel-country",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/cancel-country?country_id=101010",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"cancel-country"
+					],
+					"query": [
+						{
+							"key": "country_id",
+							"value": "101010"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDataPu",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getDataPu?key=1234&country_name=NIGERIA&state_name=KANO&lga_name=KIRU&ward_name=YALWA&pu_name=DUKAWA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getDataPu"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "1234"
+						},
+						{
+							"key": "country_name",
+							"value": "NIGERIA"
+						},
+						{
+							"key": "state_name",
+							"value": "KANO"
+						},
+						{
+							"key": "lga_name",
+							"value": "KIRU"
+						},
+						{
+							"key": "ward_name",
+							"value": "YALWA"
+						},
+						{
+							"key": "pu_name",
+							"value": "DUKAWA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDataward",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getData_ward?key=1234&country_name=NIGERIA&state_name=KANO&lga_name=KIRU&ward_name=YALWA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getData_ward"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "1234"
+						},
+						{
+							"key": "country_name",
+							"value": "NIGERIA"
+						},
+						{
+							"key": "state_name",
+							"value": "KANO"
+						},
+						{
+							"key": "lga_name",
+							"value": "KIRU"
+						},
+						{
+							"key": "ward_name",
+							"value": "YALWA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDatalga",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getData_lga?key=1234&country_name=NIGERIA&state_name=KANO&lga_name=KIRU",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getData_lga"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "1234"
+						},
+						{
+							"key": "country_name",
+							"value": "NIGERIA"
+						},
+						{
+							"key": "state_name",
+							"value": "KANO"
+						},
+						{
+							"key": "lga_name",
+							"value": "KIRU"
+						},
+						{
+							"key": "ward",
+							"value": "YALWA",
+							"disabled": true
+						},
+						{
+							"key": "pu",
+							"value": "DUKAWA",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDatastate",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getData_state?key=1234&country_name=NIGERIA&state_name=KANO",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getData_state"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "1234"
+						},
+						{
+							"key": "country_name",
+							"value": "NIGERIA"
+						},
+						{
+							"key": "state_name",
+							"value": "KANO"
+						},
+						{
+							"key": "ward",
+							"value": "YALWA",
+							"disabled": true
+						},
+						{
+							"key": "pu",
+							"value": "DUKAWA",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getDatacountry",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODQ0NTc3OSwianRpIjoiNTdlZTk4YTAtM2FiNy00N2IxLThmYzAtNzdkMGVlOGQ2OWQzIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2Njg0NDU3NzksImV4cCI6MTY3MDUxOTM3OX0.piX9P3JznMPSpferMRNKTDH4Y-sUQZwbXRo_D83e40M",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/getData_country?key=1234&country_name=NIGERIA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"getData_country"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "1234"
+						},
+						{
+							"key": "country_name",
+							"value": "NIGERIA"
+						},
+						{
+							"key": "lga",
+							"value": "KIRU",
+							"disabled": true
+						},
+						{
+							"key": "pu",
+							"value": "DUKAWA",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getchecknumber",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/check-number?number=075582256",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"check-number"
+					],
+					"query": [
+						{
+							"key": "number",
+							"value": "075582256"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getpresidentialresults/pu",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODM0MzgwMywianRpIjoiZWNjM2IyOGMtYzA3OC00YjVkLTkwMDUtZTM0NzA3NjgzZDJiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2NjgzNDM4MDMsImV4cCI6MTY3MDQxNzQwM30.X-PALTQDWqcG01mcD-UD1WAtowgHmmLtEAF2pJk8JgQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/presidentialresults/pu?country_id=1&state_id=1&lga_id=1&ward_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"presidentialresults",
+						"pu"
+					],
+					"query": [
+						{
+							"key": "country_id",
+							"value": "1"
+						},
+						{
+							"key": "state_id",
+							"value": "1"
+						},
+						{
+							"key": "lga_id",
+							"value": "1"
+						},
+						{
+							"key": "ward_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getpresidentialresults/ward",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODM0MzgwMywianRpIjoiZWNjM2IyOGMtYzA3OC00YjVkLTkwMDUtZTM0NzA3NjgzZDJiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2NjgzNDM4MDMsImV4cCI6MTY3MDQxNzQwM30.X-PALTQDWqcG01mcD-UD1WAtowgHmmLtEAF2pJk8JgQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/presidentialresults/ward?country_id=1&state_id=1&lga_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"presidentialresults",
+						"ward"
+					],
+					"query": [
+						{
+							"key": "country_id",
+							"value": "1"
+						},
+						{
+							"key": "state_id",
+							"value": "1"
+						},
+						{
+							"key": "lga_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getpresidentialresults/lga",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODM0MzgwMywianRpIjoiZWNjM2IyOGMtYzA3OC00YjVkLTkwMDUtZTM0NzA3NjgzZDJiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2NjgzNDM4MDMsImV4cCI6MTY3MDQxNzQwM30.X-PALTQDWqcG01mcD-UD1WAtowgHmmLtEAF2pJk8JgQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/presidentialresults/lga?country_id=1&state_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"presidentialresults",
+						"lga"
+					],
+					"query": [
+						{
+							"key": "country_id",
+							"value": "1"
+						},
+						{
+							"key": "state_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "presidentialresults/state",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTY2ODM0MzgwMywianRpIjoiZWNjM2IyOGMtYzA3OC00YjVkLTkwMDUtZTM0NzA3NjgzZDJiIiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im11YmFzaGlyYmFiYXIxMEBnbWFpbC5jb20iLCJuYmYiOjE2NjgzNDM4MDMsImV4cCI6MTY3MDQxNzQwM30.X-PALTQDWqcG01mcD-UD1WAtowgHmmLtEAF2pJk8JgQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/presidentialresults/state?country_id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"presidentialresults",
+						"state"
+					],
+					"query": [
+						{
+							"key": "country_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
